@@ -26,7 +26,7 @@ $(function()
             gameBoard.appendChild(row);
         };
     };
-    generateBoard();
+    generateBoard(100);
     $(".button")
     .mouseover(function(){
         var randomColor = Math.floor(Math.random()*16777215).toString(16);

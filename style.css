@@ -1,6 +1,8 @@
 body 
 {
     height: 100vh;
+    width: 100%;
+    background-color: black;
 }
 div
 {
@@ -23,5 +25,8 @@ div
 #gameBoard
 {
     height: 100vh;
+    width: 100vh;
+    margin: auto;
     flex-direction: column;
+    background-color: white;
 }
