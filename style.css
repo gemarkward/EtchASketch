@@ -1,0 +1,30 @@
+body 
+{
+    height: 100vh;
+}
+div
+{
+    display: flex;
+    flex: 1;
+    align-content: center;
+    gap: 1px 1px;
+}
+.button
+{
+    flex: 1;
+    flex-grow: 1;
+    flex-direction: row;
+    background-color: peachpuff;
+    border-style: double;
+    border-color: black;
+}
+.row
+{
+    flex: 1;
+    flex-direction: row;
+}
+#gameBoard
+{
+    height: 100vh;
+    flex-direction: column;
+}
