@@ -1,16 +1,17 @@
 $(function()
 {
-    const isNumber = function isNumber(value) 
+    function isNumber(val) 
     {
-   return typeof value === 'number' && isFinite(value);
+        return !isNaN(val);
     }
+
     function generateBoard(n)
     {
         // Allow for autogenerate on reload without input prompt
         if (n == null)
         {
             // Prompt user for number of sides
-            var n = prompt("How many pixels per side would you like?");
+            n = prompt("How many pixels per side would you like?");
         };
         // Check input for cancel button
         if (n != null)
@@ -23,11 +24,13 @@ $(function()
             // Make sure input is a number
             else if (!isNumber(n))
             {
-                alert("Input must be a number between 1 and 100!");   
+                alert("Input must be a number."); 
+                n = 16;  
             }
             // Check for value over 100, if so set to 100
             else if (n > 100)
             {
+                alert("Max size is 100x100.")
                 n = 100;
             };
             // Initialize gameBoard, assign game's <div>
